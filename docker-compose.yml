@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  excel_web:
+    build: .
+    container_name: end_excel
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
